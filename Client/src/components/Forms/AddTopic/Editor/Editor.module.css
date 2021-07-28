@@ -1,0 +1,89 @@
+.pc_wrapper textarea {
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--blocks);
+    color:var(--text-1);
+    border:1px solid var(--background);
+    resize: none;
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+}
+.textarea_wrapper {
+    height: 140px;
+}
+.pc_label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'ncsemibold';
+    color:var(--text-2); 
+    margin-top: 20px;
+}
+.error {
+    color:var(--error-text) !important; 
+}
+.error_message {
+    color:var(--error-text);
+    margin-top: 5px;
+    font-size: 14px;
+}
+strong {
+    font-weight: bold;
+}
+.preview {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 20px;
+    padding: 20px;
+    border:1px solid var(--background);
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+.pc_wrapper button {
+    background: var(--background);
+    border:none;
+    line-height: 48px;
+    border-radius: 5px;
+    color:var(--text-1);
+    border:1px solid var(--background);
+    cursor: pointer;
+}
+.pc_wrapper button:hover {
+    background: var(--blocks);
+}
+.preview li {
+    margin-left: 20px;
+}
+.preview em {
+    font-style: italic;
+}
+.preview h1 {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.preview h2 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.preview h3 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.preview blockquote  {
+    background: var(--background);
+    padding:20px;
+    border-radius: 5px;
+}
+.preview blockquote::before {
+    display: block;
+    content: 'Цитата';
+    text-align: right;
+    margin-bottom: 5px;
+    font-family: 'nclight';
+    color:var(--extra-span);
+}

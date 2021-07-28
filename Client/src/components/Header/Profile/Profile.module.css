@@ -1,0 +1,66 @@
+.mobile_wrapper {
+    display: flex;
+}
+.mobile_username {
+    margin-right: 10px;
+    line-height: 24px;
+}
+.mobile_useravatar {
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 50%;
+}
+.mobile_useravatar img {
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 50%;
+}
+.mobile_signin {
+    line-height: 24px;
+}
+.mobile_register {
+    margin-top: -2px;
+    height: 28px;
+    line-height: 28px;
+    background: var(--text-1);
+    color:var(--blocks);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.pc_wrapper {
+    display: flex;
+}
+.pc_username {
+    margin-right: 10px;
+    line-height: 32px;
+}
+.pc_useravatar {
+    width: 32px;
+    height: 32px;
+    background: var(--background);
+    border-radius: 50%;
+}
+.pc_useravatar img {
+    width: 32px;
+    height: 32px;
+    background: var(--background);
+    border-radius: 50%;
+}
+.pc_signin {
+    line-height: 32px;
+}
+.pc_register {
+    height: 32px;
+    line-height: 32px;
+    background: var(--text-1);
+    color:var(--blocks);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin-left: 20px;
+}

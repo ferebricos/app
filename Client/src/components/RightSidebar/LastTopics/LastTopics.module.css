@@ -1,0 +1,48 @@
+.pc_wrapper {
+    position: fixed;
+    width: 200px;
+    padding: 20px;
+    background: var(--blocks);
+    margin-top: 385px;
+    border-radius: 20px;
+}
+.mobile_wrapper {
+    padding: 20px;
+    background: var(--blocks);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.title {
+    font-weight: bold;
+    color:var(--text-2)
+}
+.item {
+    margin-top: 10px;
+    display: flex;
+    line-height: 32px;
+}
+.icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 5px;
+    background: var(--background);
+}
+.icon svg {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.item_title {
+    max-width: 145px;
+    margin-left: 10px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.item_title_mobile {
+    margin-left: 10px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

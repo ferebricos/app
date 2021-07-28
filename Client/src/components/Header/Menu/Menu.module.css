@@ -1,0 +1,84 @@
+.mobile_burger > div {
+    left:0px !important;
+    padding: 0px;
+    height: 24px !important;
+    width: 24px !important;
+}
+.mobile_burger > div > div > div{
+    color:var(--text-1);
+    left:0px !important;
+    width: 24px !important;
+}
+.mobile_burger > div > div:nth-child(1) > div{
+    top:4px !important;
+}
+.mobile_burger > div > div:nth-child(2) > div{
+    top:11px !important;
+}
+.mobile_burger > div > div:nth-child(3) > div{
+    top:18px !important;
+}
+.menu {
+    top:48px;
+    left:0px;
+    width: 100%;
+    position: absolute;
+    background: var(--blocks);
+    border-top: 1px solid var(--background);
+    padding-bottom: 20px;
+}
+.title {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color:var(--text-2);
+    margin-bottom: 20px;
+}
+.menu ul {
+    margin-left: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+.menu ul li span {
+    color:var(--extra-span);
+    text-align: right;
+    float: right;
+    line-height: 18px;
+    font-size: 12px;
+}
+.menu ul li {
+    cursor: pointer;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu ul li:hover {
+    color:var(--text-2);
+}
+.active_link {
+    text-decoration: underline;
+}
+.mobile_logout {
+    width: 100%;
+    background: var(--background);
+    text-align: center;
+    margin-right: 20px;
+    border:none;
+    outline:none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color:var(--text-1);
+}
+.mobile_theme {
+    width: 100%;
+    background: var(--background);
+    text-align: center;
+    margin-right: 20px;
+    border:none;
+    outline:none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color:var(--text-1);
+}

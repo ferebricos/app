@@ -1,0 +1,39 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    line-height: 32px;
+    padding: 20px;
+    background: var(--blocks);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.mobile_wrapper {
+    position: relative;
+    display: block;
+    line-height: 32px;
+    padding: 20px;
+    background: var(--blocks);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.mobile_wrapper .prev,
+.mobile_wrapper .next {
+    position: relative;
+    left:0px;
+    right: 0px;
+    width: 100%;
+}
+.page {
+    width: 100%;
+    text-align: center;
+    color:var(--text-2);
+    font-size: 18px;
+}
+.prev {
+    position: absolute;
+    left: 20px;
+}
+.next {
+    position: absolute;
+    right: 20px;
+}

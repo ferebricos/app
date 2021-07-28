@@ -1,0 +1,26 @@
+:root {
+    --blocks: #FFFFFF;
+    --background:#F1F4F5;
+    --text-1:#5A5957;
+    --text-2:#161517;
+    --extra-span:#D1D1D1;
+    --extratext-1:#0091FB;
+    --extrablock-1:#DBF0FF;
+    --extratext-2:#CBEAA6;
+    --extrablock-2:#F3F9D2;
+    --extratext-3:#ACA7EB;
+    --extrablock-3:#E5EBFF;
+    --extratext-4:#EBC9A7;
+    --extrablock-4:#FFEEE9;
+    --error-block:rgb(255, 200, 200);
+    --error-text:rgb(253, 107, 107);
+    --top-1:#FFEE95;
+    --top-2:#EFEFEF;
+    --top-3:#FFE7B9;
+    --tst:#121212e1;
+  }
+  /* :root {
+    --background: #1E1E1E;
+    --blocks: #171717;
+    --text-1:#dbdbdb;
+  } */

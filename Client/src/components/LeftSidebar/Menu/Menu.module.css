@@ -1,0 +1,44 @@
+.menu {
+    position: fixed;
+    margin-top: 20px;
+    width: 200px;
+    padding-left:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    background: var(--blocks);
+}
+.title {
+    font-weight: bold;
+    color:var(--text-2);
+    margin-bottom: 20px;
+}
+.menu ul {
+    list-style: none;
+}
+.menu ul li span {
+    color:var(--extra-span);
+    text-align: right;
+    float: right;
+    line-height: 18px;
+    font-size: 12px;
+}
+.menu ul li {
+    cursor: pointer;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu ul li:hover {
+    color:var(--text-2);
+}
+.menu a {
+    text-decoration: none;
+    color:inherit
+}
+.menu a.active_link {
+    text-decoration: none;
+    color:var(--text-2);
+    text-decoration: underline;
+}

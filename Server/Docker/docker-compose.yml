@@ -1,0 +1,88 @@
+version: "3.9" 
+services:
+    db:
+        image: postgres:13-alpine
+        container_name: pg
+        ports:
+            - 5432:5432
+        volumes:
+            - ./pg_data:/var/lib/postgresql/data/pgdata
+            - ./createdb.sql:/docker-entrypoint-initdb.d/init.sql
+        environment:
+            - POSTGRES_USER=test_user
+            - POSTGRES_PASSWORD=qwerty
+            - POSTGRES_DB=appdb
+            - PGDATA=/var/lib/postgresql/data/pgdata
+        restart: always
+    rediscache:
+        image: redis:6.2.1-alpine
+        ports:
+            - "6379:6379"
+        command: redis-server --requirepass lol123qqz
+        volumes:
+            - $PWD/redis-data:/var/lib/redis
+            - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+        environment:
+            - REDIS_REPLICATION_MODE=master
+        restart: always
+    app:
+        image: ferebrico/webapp
+        container_name: app
+        ports:
+            - 3000:3000
+        environment:
+            PG_HOST: db
+            REDIS_HOST: rediscache
+            REDIS_PASSWORD: lol123qqz
+        restart: always
+        links:
+            - db
+            - rediscache
+        ports:
+            - 3000:3000
+        depends_on:
+            - db
+            - rediscache
+    webserver:
+        image: nginx:alpine
+        container_name: webserver
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - web-root:/var/www/html
+            - ./nginx-conf:/etc/nginx/conf.d
+            - certbot-etc:/etc/letsencrypt
+            - certbot-var:/var/lib/letsencrypt
+            - dhparam:/etc/ssl/certs
+        links:
+            - app
+        depends_on:
+            - app
+    certbot:
+        image: certbot/certbot
+        container_name: certbot
+        volumes:
+            - certbot-etc:/etc/letsencrypt
+            - certbot-var:/var/lib/letsencrypt
+            - web-root:/var/www/html
+        depends_on:
+            - webserver
+        command: certonly --webroot --webroot-path=/var/www/html --email ferebricos@gmail.com --agree-tos --no-eff-email --force-renewal -d ferebrico.host  -d www.ferebrico.host
+volumes:
+    certbot-etc:
+    certbot-var:
+    web-root:
+        driver: local
+        driver_opts:
+            type: none
+            device: /root/node_project/views/
+            o: bind
+    dhparam:
+        driver: local
+        driver_opts:
+            type: none
+            device: /root/node_project/dhparam/
+            o: bind

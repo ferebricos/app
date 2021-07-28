@@ -1,0 +1,15 @@
+.pc_wrapper {
+    height: 32px;
+    margin-top: 14px;
+    margin-left: 40px;
+}
+.pc_wrapper input {
+    background: var(--background);
+    height: 32px;
+    border-radius: 20px;
+    width: 440px;
+    outline: none;
+    border:none;
+    padding-right: 20px;
+    padding-left: 20px;
+}

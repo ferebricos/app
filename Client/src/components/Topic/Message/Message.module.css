@@ -1,0 +1,118 @@
+.wrapper {
+    background: var(--blocks);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.pc_info {
+    display: flex;
+    background: var(--background);
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 32px;
+}
+.pc_avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.pc_avatar img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pc_author {
+    margin-left: 20px;
+}
+.pc_message_id {
+    display: flex;
+    margin-left: auto;
+    color:var(--extra-span);
+}
+.pc_date {
+    margin-right: 20px;
+    color:var(--extra-span);
+}
+.pc_title {
+    margin-top: 20px;
+    font-size: 18px;
+    color:var(--text-2);
+    word-wrap: break-word;
+}
+.pc_message {
+    margin-top: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.pc_message li {
+    margin-left: 20px;
+}
+.pc_message em {
+    font-style: italic;
+}
+.pc_message h1 {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.pc_message h2 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pc_message h3 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.pc_message blockquote  {
+    background: var(--background);
+    padding:20px;
+    border-radius: 5px;
+}
+.pc_message blockquote::before {
+    display: block;
+    content: 'Цитата';
+    text-align: right;
+    margin-bottom: 5px;
+    font-family: 'nclight';
+    color:var(--extra-span);
+}
+.pc_attachments {
+    margin-top: 20px;
+    color:var(--text-2);
+    font-size: 18px;
+}
+.mobile_line {
+    margin-top: 20px;
+    display: flex;
+}
+.mobile_date {
+    color:var(--extra-span);
+}
+.mobile_message_id {
+    color:var(--extra-span);
+    margin-left: auto;
+}
+
+
+
+code  {
+    background: var(--background);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+}
+.hljs {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+}
+code .hljs-string {
+    color:rgb(72, 98, 168);
+}

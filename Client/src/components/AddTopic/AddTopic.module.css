@@ -1,0 +1,23 @@
+.pc_wrapper {
+    width: 720px;
+    padding: 20px;
+    background: var(--blocks);
+    float: right;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.pc_title {
+    display: flex;
+    border-bottom: 1px solid var(--background);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: 'ncsemibold';
+    color:var(--text-2);
+}
+.mobile_wrapper {
+    background: var(--blocks);
+    padding: 20px;
+    margin:20px;
+}

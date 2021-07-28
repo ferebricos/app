@@ -1,0 +1,33 @@
+.pc_wrapper {
+    width: 760px;
+    float: right;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.pc_category_wrapper {
+    width: 720px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--blocks);
+}
+.pc_items_wrapper wrapper:nth-child(2n) {
+    margin-left: 20px;
+}
+.mobile_wrapper {
+    display: block;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.mobile_category_wrapper {
+    display: block;
+    background: var(--blocks);
+    padding: 20px;
+    border-radius: 20px;
+}
+.paginator {
+    display: block;
+    float: left;
+    width: 100%;
+}

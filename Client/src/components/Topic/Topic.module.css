@@ -1,0 +1,40 @@
+.pc_wrapper {
+    width: 760px;
+    float: right;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.mobile_wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.pc_editor {
+    background: var(--blocks);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.mobile_editor {
+    background: var(--blocks);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mobile_editor button {
+    display: block;
+    width: 100%;
+}
+
+.pc_editor button {
+    background: var(--background);
+    border:none;
+    line-height: 48px;
+    border-radius: 5px;
+    color:var(--text-1);
+    border:1px solid var(--background);
+    cursor: pointer;
+}
+.pc_editor button:hover {
+    background: var(--blocks);
+}

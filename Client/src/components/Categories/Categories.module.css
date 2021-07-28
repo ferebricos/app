@@ -1,0 +1,21 @@
+.pc_wrapper {
+    width: 720px;
+    padding: 20px;
+    background: var(--blocks);
+    float: right;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.pc_wrapper > div,
+.mobile_wrapper > div{
+    margin-bottom:20px;
+}
+
+.mobile_wrapper {
+    background: var(--blocks);
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}

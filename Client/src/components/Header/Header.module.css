@@ -1,0 +1,88 @@
+header {
+    top:0px;
+    position: fixed;
+    width: 100%;
+    background: var(--blocks);
+    z-index: 100;
+}
+.pc_wrapper {
+    margin: 0 auto;
+    width: 1280px;
+    height: 60px;
+    display: flex;
+}
+.pc_logo {
+    width: 32px;
+    height: 32px;
+    margin-top: 14px;
+}
+.pc_button {
+    margin-top: 14px;
+    margin-left: 40px;
+    height: 32px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 32px;
+    background: var(--extrablock-1);
+    color:var(--extratext-1);
+}
+.pc_info {
+    margin-top: 14px;
+    line-height: 32px;
+    margin-left: 20px;
+}
+.pc_profile {
+    margin-left:auto;
+    justify-self: end;
+    display: inline-flex;
+    height: 32px;
+    margin-top: 14px;
+}
+.mobile_wrapper {
+    display: flex;
+    position: relative;
+    height: 48px;
+    background: var(--blocks);
+}
+.mobile_menu {
+    margin-top: 12px;
+    margin-left: 20px;
+    height: 24px !important;
+    width: 24px !important;
+}
+.mobile_logo {
+    margin-left: 20px;
+    display: inline-flex;
+    height: 24px;
+    width: 24px;
+    margin-top: 12px;
+}
+.mobile_profile {
+    margin-left:auto;
+    margin-right: 20px;
+    justify-self: end;
+    display: inline-flex;
+    height: 24px;
+    margin-top: 12px;
+}
+.pc_theme {
+    margin-left: 20px;
+    background: var(--background);
+    color:var(--text-1);
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mobile_theme {
+    margin-left: 20px;
+    background: var(--background);
+    color:var(--text-1);
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
