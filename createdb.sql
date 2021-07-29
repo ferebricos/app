@@ -1,16 +1,4 @@
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO public;
-
-GRANT CONNECT ON DATABASE appdb TO test_user;
-GRANT ALL ON SCHEMA public TO test_user;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO test_user;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO test_user;
-
-
 CREATE EXTENSION "uuid-ossp";
-
 CREATE SEQUENCE usernames AS BIGINT START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE roles (
@@ -23,6 +11,7 @@ CREATE TABLE users (
     login TEXT NOT NULL ,
     email TEXT NOT NULL ,
     password TEXT NOT NULL ,
+    avatar TEXT DEFAULT NULL ,
     role INTEGER NOT NULL DEFAULT 1,
     username TEXT DEFAULT CONCAT('user',nextval('usernames')),
     regdate TIMESTAMP NOT NULL DEFAULT NOW(),
@@ -81,6 +70,7 @@ CREATE TABLE forum_message (
     FOREIGN KEY (topic) REFERENCES forum_topic (id)
 );
 
+
 CREATE FUNCTION users_messages_counter() RETURNS trigger AS $users_messages_counter$
     BEGIN
         IF TG_OP = 'INSERT' THEN
@@ -129,12 +119,12 @@ INSERT INTO roles (id,name) VALUES (2,'defaultuser');
 INSERT INTO users_tokens_types (id,name) VALUES (1,'emailConfirm');
 INSERT INTO users_tokens_types (id,name) VALUES (2,'passwordReset');
 
+INSERT INTO forum_categories (id,title,description,icon) VALUES (1,'Операционные системы','В этом разделе вы можете обсудить операционные системы и связанные с ними темы','os');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (2,'Разработка программ','В данном разделе можно задавать вопросы и делиться своими программными наработками','prog');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (3,'Компьютерное железо','Обсуждайте аппаратное обеспечение и свои собственные идеи и реализации','comp');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (4,'Разработка игр','Делитесь своими разработками и наборами готовых ассетов для разработки игр','game');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (5,'Базы данных','Раздел для обсуждения всего, что связано с базами данных','bd');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (6,'Работа','Здесь вы можете оставить отзыв о своей работе, или прочитать отзывы других людей','work');
+INSERT INTO forum_categories (id,title,description,icon) VALUES (7,'Общение','Просто общение на любые темы','chat');
 
-INSERT INTO forum_categories (id,title,description,icon) VALUES (1,'Каталог игр','описание','/icon');
-INSERT INTO forum_categories (id,title,description,icon) VALUES (2,'Разработка игр','описание','/icon');
-INSERT INTO forum_categories (id,title,description,icon) VALUES (3,'Игровые новости','описание','/icon');
-INSERT INTO forum_categories (id,title,description,icon) VALUES (4,'Общение','описание','/icon');
-
-
- 
- 
+INSERT INTO users (login,email,password,username,role) VALUES ('admin','admin@gmail.com','$2y$08$qLyIeioUKY09NfWmDZ.Uve33MPJHNnt9HGrfSmgw354A1RhkXDaKe','admin',2)

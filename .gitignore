@@ -1,0 +1,5 @@
+/pg_data
+/redis-data
+/redis.conf
+/client/node_modules
+/server/node_modules

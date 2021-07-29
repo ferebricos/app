@@ -1,7 +1,7 @@
 import * as axios from "axios";
 const instance = axios.create({
     withCredentials: true,
-    baseURL: 'https://ferebrico.host/api/',
+    baseURL: 'http://localhost/api/',
 });
 
 export const appAPI = {
